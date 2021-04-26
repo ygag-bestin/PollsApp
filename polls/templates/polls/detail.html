@@ -1,0 +1,60 @@
+{%  load static %}
+<h1>{{ question.question_text }}</h1>
+<link rel="stylesheet"   type="text/css" href="{% static 'polls/style.css'}">
+
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'polls:vote' question.id %}" method="post">
+{% csrf_token %}
+
+
+
+{% for choice in question.choice.all %}
+    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+
+{% endfor %}
+
+
+    <br>
+<input type="submit" value="Vote">
+
+<p>Views:{{ question.view_count }}</p>
+    <br>
+    <h2> Comments </h2>
+
+</form>
+
+{% for comment in comments %}
+
+          <strong>><i>
+            {{ comment.email }}
+          </i></strong>
+          </p>
+          {{ comment.body | linebreaks }}
+
+{% endfor %}
+{% if new_comment %}
+  <h2>Your comment has been added.</h2>
+{% else %}
+  <h2>Add a new comment</h2>
+  <form action="." method="post">
+    {{ comment_form.as_p }}
+    {% csrf_token %}
+    <p><input type="submit" value="Add comment"></p>
+  </form>
+{% endif %}
+
+<h2> Tag </h2>
+{% for tag in question.tag.all %}
+
+          <p>
+            {{ tag }}
+
+          </p>
+
+
+{% endfor %}
+
+

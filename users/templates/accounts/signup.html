@@ -1,0 +1,33 @@
+
+
+<head>
+<style>
+div.a {
+  text-align: left;
+  padding-left: 35%;
+  padding-right: 180px;
+  padding-top: 100px;
+}
+</style>
+</head>
+
+{% block content %}
+<div class="a">
+            {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <p style="color:red;">{{ message }}</p>
+    {% endfor %}
+</ul>
+{% endif %}
+    <h2>Sign Up</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <button type="submit">Signup</button>
+        <br><br>
+
+    </form>
+    </div>
+{% endblock content %}

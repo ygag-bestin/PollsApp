@@ -1,0 +1,11 @@
+body {
+    background-color:Ivory;
+}
+
+li a {
+    color: green;
+}
+p.thick {
+  font-weight: bold;
+  color: green;
+}
