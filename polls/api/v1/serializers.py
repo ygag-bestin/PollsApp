@@ -39,4 +39,13 @@ class CommentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Comment
-        fields = ['id', 'email', 'body', "question_text", ]
+        fields = (
+            'id',
+            'question_text',
+            'question',
+            'email',
+            'body',
+        )
+        extra_kwargs = {
+            'question': {'write_only': True}
+        }

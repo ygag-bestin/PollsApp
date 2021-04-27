@@ -16,6 +16,6 @@ class QuestionDetail(generics.RetrieveAPIView):
     serializer_class = QuestionSerializer
 
 
-class CommentList(generics.ListAPIView):
+class CommentList(generics.ListCreateAPIView):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
