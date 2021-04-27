@@ -15,5 +15,4 @@ class UserDetail(generics.RetrieveAPIView):
     serializer_class = UserSerializer
 
 
-   
-test = "test for git pull"
+
