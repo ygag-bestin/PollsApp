@@ -15,5 +15,4 @@ class UserDetail(generics.RetrieveAPIView):
     serializer_class = UserSerializer
 
 
-
-# trail changes for git
+text=get_user_model()
