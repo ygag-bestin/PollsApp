@@ -14,5 +14,3 @@ class UserDetail(generics.RetrieveAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
-
-text=get_user_model()
