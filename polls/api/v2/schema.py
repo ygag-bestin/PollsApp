@@ -14,8 +14,7 @@ class QuestionType(DjangoObjectType):
 
     class Meta:
         model = Question
-        fields = ['id', 'question_text', 'expiry_date', 'pub_date', 'added_by',
-                  'choice']
+        fields = '__all__'
 
 
 class Query(graphene.ObjectType):
