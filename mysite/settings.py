@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'django.contrib.admindocs',
     'rest_framework',
+    'graphene_django',
 
 ]
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -107,11 +108,10 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
-    {'NAME': 'users.validators.NumberValidator',},
+    {'NAME': 'users.validators.NumberValidator', },
     {'NAME': 'users.validators.UppercaseValidator', },
     {'NAME': 'users.validators.LowercaseValidator', },
     {'NAME': 'users.validators.SymbolValidator', },
-
 
 ]
 AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends'

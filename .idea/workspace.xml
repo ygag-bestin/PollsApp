@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63b590ee-f834-4b64-92ad-35ef7ab770f5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/polls/api/v2/schema.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/polls/api/v2/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/polls/api/v1/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls/api/v1/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/polls/api/v1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls/api/v1/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
