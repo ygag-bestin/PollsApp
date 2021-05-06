@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63b590ee-f834-4b64-92ad-35ef7ab770f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/polls/api/v2/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/polls/api/v2/schema.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/api/v2/schema.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/api/v2/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,16 +43,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/polls/api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/users/api/v2" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/users/api/v2" />
       <recent name="$PROJECT_DIR$/polls/api" />
       <recent name="$PROJECT_DIR$/polls/api/v1" />
       <recent name="$PROJECT_DIR$/users" />
       <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/polls/static/polls/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/polls/api/v1" />
