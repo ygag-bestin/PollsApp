@@ -1,5 +1,6 @@
 import graphene
 from graphene_django import DjangoObjectType
+from graphene_django import DjangoListField
 from users.models import User
 
 
@@ -10,10 +11,9 @@ class UserType(DjangoObjectType):
 
 
 class Query(graphene.ObjectType):
-    all_users = graphene.List(UserType)
-
-    def resolve_all_users(self, info):
-        return User.objects.all()
+    all_users = DjangoListField(UserType)
 
 
 schema = graphene.Schema(query=Query)
+
+test test

@@ -1,5 +1,6 @@
 import graphene
 from graphene_django import DjangoObjectType
+from graphene_django import DjangoListField
 from polls.models import Question, Choice
 
 
@@ -18,10 +19,7 @@ class QuestionType(DjangoObjectType):
 
 
 class Query(graphene.ObjectType):
-    all_questions = graphene.List(QuestionType)
-
-    def resolve_all_questions(self, info):
-        return Question.objects.all()
+    all_questions = DjangoListField(QuestionType)
 
 
 schema = graphene.Schema(query=Query)
