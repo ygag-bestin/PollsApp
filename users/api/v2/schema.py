@@ -14,6 +14,4 @@ class Query(graphene.ObjectType):
     all_users = DjangoListField(UserType)
 
 
-schema = graphene.Schema(query=Query)
-
-test test
+# schema = graphene.Schema(query=Query)
