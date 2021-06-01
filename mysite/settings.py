@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'django.contrib.admindocs',
     'rest_framework',
+    'graphene_django',
 
     'seo',
     'taggit',

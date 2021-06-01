@@ -4,7 +4,7 @@ from django.utils.html import format_html
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.utils.translation import ugettext_lazy as _
 from django.db.models.functions import Lower
-from django.core.exceptions import ValidationError
+from graphene_django import DjangoObjectType
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -80,3 +80,4 @@ class User(AbstractUser):
 
     image_tag.short_description = 'Image'
     objects = UserManager()
+
