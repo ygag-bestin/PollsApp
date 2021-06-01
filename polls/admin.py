@@ -62,7 +62,7 @@ class QuestionAdmin(admin.ModelAdmin):
         ('tag', {'fields': ['tag']}),
     ]
     inlines = [ChoiceInline, CommentInLine, ]
-    list_display = ('question_text', 'pub_date', 'was_published_recently', 'choices', 'added_by',)
+    list_display = ('id','question_text', 'pub_date', 'was_published_recently', 'choices', 'added_by',)
     search_fields = ['question_text']
 
     def has_delete_permission(self, request, obj=None):

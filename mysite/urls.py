@@ -15,13 +15,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.sitemaps.views import sitemap
+from seo.sitemaps import QuestionSitemap
+
+sitemaps = {
+    'polls': QuestionSitemap()
+
+}
 
 urlpatterns = [
     path('', include('polls.urls')),
     path('accounts/', include('users.urls')),
     path('admin/doc/', include('django.contrib.admindocs.urls')),
     path('admin/', admin.site.urls),
-    # path('', include('users.urls')),
+    path('sitemap.xml/', sitemap, {'sitemaps': sitemaps},
+         name='django.contrib.sitemaps.views.sitemap'),
+    path('robots.txt/', include('robots.urls')),
     # path('accounts/', include('django.contrib.auth.urls')),
 
 ]

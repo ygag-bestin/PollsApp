@@ -16,7 +16,7 @@ urlpatterns = [
                        name='results'),
                   path('polls/<int:question_id>/vote/',
                        views.VoteView.as_view(), name='vote'),
-
+ 
                   path('polls/api/', include('polls.api.urls')),
               ] + static(settings.MEDIA_URL,
                          document_root=settings.MEDIA_ROOT) + static(

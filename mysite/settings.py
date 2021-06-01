@@ -41,7 +41,17 @@ INSTALLED_APPS = [
     'django.contrib.admindocs',
     'rest_framework',
 
+    'seo',
+    'taggit',
+
+    'django.contrib.sites',
+    'django.contrib.redirects',
+
+    'django.contrib.sitemaps',
+
+    'robots', 
 ]
+SITE_ID = 2
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = '0.0.0.0'
@@ -58,6 +68,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -107,11 +119,10 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
-    {'NAME': 'users.validators.NumberValidator',},
+    {'NAME': 'users.validators.NumberValidator', },
     {'NAME': 'users.validators.UppercaseValidator', },
     {'NAME': 'users.validators.LowercaseValidator', },
     {'NAME': 'users.validators.SymbolValidator', },
-
 
 ]
 AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends'
