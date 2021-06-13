@@ -55,14 +55,19 @@ class TagQuestionInline(admin.TabularInline):
 class QuestionAdmin(admin.ModelAdmin):
     fieldsets = [
         (None, {'fields': ['question_text']}),
-        ('Date information', {'fields': ['pub_date'], 'classes': ['collapse']}),
+        (
+            'Date information',
+            {'fields': ['pub_date'], 'classes': ['collapse']}),
         ('added_by', {'fields': ['added_by']}),
         ('priority', {'fields': ['priority']}),
         ('expiry date', {'fields': ['expiry_date']}),
         ('tag', {'fields': ['tag']}),
+        ('SeoForQuestion', {'fields': ['title', 'description', 'url',]}),
     ]
     inlines = [ChoiceInline, CommentInLine, ]
-    list_display = ('id','question_text', 'pub_date', 'was_published_recently', 'choices', 'added_by',)
+    list_display = (
+        'id', 'question_text', 'pub_date', 'was_published_recently', 'choices',
+        'added_by',)
     search_fields = ['question_text']
 
     def has_delete_permission(self, request, obj=None):
@@ -76,6 +81,16 @@ class TagAdmin(admin.ModelAdmin):
     form = VerifyTagAdmin
     list_display = ('tag',)
     inLines = [TagQuestionInline]
+
+
+# class seo2Admin(admin.ModelAdmin):
+#     list_display = ['title', 'description', 'url', 'tag_list']
+#
+#     def get_queryset(self, request):
+#         return super().get_queryset(request).prefetch_related('tags')
+#
+#     def tag_list(self, obj):
+#         return u", ".join(o.name for o in obj.tags.all())
 
 
 admin.site.register(Question, QuestionAdmin, )

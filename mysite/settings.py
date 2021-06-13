@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.admindocs',
     'rest_framework',
     'graphene_django',
-
+    
     'seo',
     'taggit',
 

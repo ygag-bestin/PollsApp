@@ -7,6 +7,10 @@ from django.utils.html import format_html
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
 from django.conf import settings
+from seo.models import SeoMetaData, SeoList
+
+from django.contrib.contenttypes.fields import GenericRelation
+from django.dispatch import Signal
 
 User = settings.AUTH_USER_MODEL
 
@@ -21,7 +25,7 @@ class Tag(models.Model):
         return self.tag
 
 
-class Question(models.Model):
+class Question(SeoMetaData, models.Model):
     """
         Stores a single poll question entry, related to :model:`Choice` and
         :model:`Tag`.
@@ -33,6 +37,8 @@ class Question(models.Model):
     expiry_date = models.DateTimeField(null=True, default=None)
     tag = models.ManyToManyField(Tag, related_name="tags", blank=True)
     priority = models.PositiveIntegerField(default=0, null=True, blank=True)
+
+    seo2 = GenericRelation(SeoList, related_query_name="seo2")
 
     def __str__(self):
         """Makes the poll question entry live on the site."""
