@@ -44,3 +44,5 @@ class SeoList(models.Model):
     def display(self):
         ListObjects = SeoList.objects.filter(id=self.object_id).values('seo2__title')
         return ListObjects
+    
+    #changesssssssss
